@@ -9,11 +9,9 @@ int main(void)
 	char hex;
 	char Hex;
 
-	hex = 0;
-	while (hex <= '9')
+	for (hex = '0'; hex <= '9'; hex++)
 	{
 		putchar(hex);
-		hex++;
 	}
 	Hex = 'a';
 	while (Hex <= 'f')
