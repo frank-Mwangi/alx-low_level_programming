@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char alph = a;
+	char alph;
 
 	for (alph = 0; alph < 26; alph++)
 	{
