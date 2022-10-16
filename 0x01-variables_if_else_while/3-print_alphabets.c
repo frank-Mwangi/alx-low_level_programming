@@ -12,15 +12,16 @@ int main(void)
 	char Alph;
 
 	alph = 'a';
+	Alph = 'A';
 	while (alph <= 'z')
 	{
 		putchar(alph);
 		alph = alph + 1;
 	}
-	Alph = 'A';
 	while (Alph <= 'Z')
 	{
-		putchar (alph);
+		putchar (Alph);
+		Alph = Alph + 1;
 	}
 	putchar ('\n');
 	return (0);
