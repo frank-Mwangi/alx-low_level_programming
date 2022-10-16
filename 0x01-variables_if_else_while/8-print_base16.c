@@ -18,7 +18,7 @@ int main(void)
 	Hex = 'a';
 	while (Hex <= 'f')
 	{
-		puchar(Hex);
+		putchar(Hex);
 		Hex++;
 	}
 	putchar('\n');
