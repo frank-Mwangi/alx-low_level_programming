@@ -5,7 +5,7 @@
  * @b: integer 2
  * Return: sum of two integers
  */
-int add(int a, int b);
+int add(int a, int b)
 {
 	int sum;
 
