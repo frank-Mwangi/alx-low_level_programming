@@ -2,7 +2,6 @@
 
 /**
  * main - causes an infinite loop
- * line 19: error (i does not increment)
  * Return: 0
  */
 
