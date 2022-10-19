@@ -1,1 +1,1 @@
-int positive-or_negative(int i);
+int positive-or_negative(int);
