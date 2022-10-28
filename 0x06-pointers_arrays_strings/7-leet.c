@@ -12,11 +12,11 @@ char *leet(char *c)
 	int k[] = "AaEeOoTtLl";
 	int m[] = "4433007711";
 
-	for (i = 0; *(k + i) != '\0'; i++)
+	for (i = 0; *(c + i) != '\0'; i++)
 	{
-		for (j = 0; *(m + j) != '\0'; j++)
+		for (j = 0; *(k + j) != '\0'; j++)
 		{
-			if *(c + i) == *(k + i)
+			if *(c + i) == *(k + j)
 				c[i] = m[j];
 		}
 	}
