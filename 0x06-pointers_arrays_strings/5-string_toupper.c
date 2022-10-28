@@ -3,7 +3,7 @@
 /**
  * string_toupper - converts lowercase letters in string
  *			to uppercase
- *
+ * @c: String in question
  * Return: result
  */
 
@@ -15,9 +15,9 @@ char *string_toupper(char *c)
 	for (i = 0; *(c + i) != '\0'; i++)
 	{
 		if (i >= 97 && i <= 122)
-			result = (i - 32);
+			result = *(c + (i - 32));
 		else
-			result = i;
+			result = *(c + i);
 	}
 	return (result);
 }
