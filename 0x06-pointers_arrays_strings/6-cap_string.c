@@ -8,17 +8,15 @@
 
 char *cap_string(char *str)
 {
-	int separator;
 	int i, j;
-
-	separator[13] = {'\n', ',', '\t', ' ', ';', '.',
+	int separator[13] = {'\n', ',', '\t', ' ', ';', '.',
 		'!', '?', '"', '(', ')', '{', '}'};
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		for (j = 0; j < 13; j++)
 		{
-			if (*(str + i) - 1 == separator[j] && str[i] >= 97 && str[i] <= 122)
-				str[i] = str[i] - 32;
+			if (*(str + i - 1) == separator[j] && str[i] >= 97 && str[i] <= 122)
+				*(str + i) = *(str + i) - 32;
 		}
 	}
 	return (str);
