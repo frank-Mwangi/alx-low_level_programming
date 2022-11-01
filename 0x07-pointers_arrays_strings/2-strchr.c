@@ -9,18 +9,16 @@
  * Return: s
  */
 
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == c)
-			s = &c;
-		else
-			s = NULL;
+		if (*s == c)
+			return (s);
 	}
-	return (s);
+	if (c == '\0')
+		return (s);
+	return (NULL);
 }
-
-
