@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagsums - sums both diagonals of a square
- *			matrix
+ * print_diagsums - prints sum of both diagonals of a
+ *			square matrix
  *
  * @a: Multidimensional array (square matrix)
  * @size: size of matrix
