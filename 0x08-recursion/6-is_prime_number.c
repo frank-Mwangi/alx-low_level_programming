@@ -29,7 +29,5 @@ int if_prime(int i, int j)
 		return (0);
 	else if (j * j > i)
 		return (1);
-	return (if_prime(i, j++));
+	return (if_prime(i, j + 1));
 }
-
-
