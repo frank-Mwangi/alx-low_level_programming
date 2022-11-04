@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - prints a string to stdout
- *
+ *			followed by newline
  * @s: String in question
  */
 
