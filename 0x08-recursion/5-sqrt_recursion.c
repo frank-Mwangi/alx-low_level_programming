@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
  * sqrt - guesses the natural square root to
  *	a number
  * @i: square root guesses
- * @j: provided integer
+ * @j: input integer
  * Return: square root
  */
 int sqrt(int i, int j)
