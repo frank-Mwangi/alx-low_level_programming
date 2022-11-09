@@ -10,8 +10,8 @@
 
 char *create_array(unsigned int size, char c)
 {
-	int *i;
-	int j;
+	char *i;
+	unsigned int j;
 
 	if (size == 0)
 		return (NULL);
@@ -26,4 +26,3 @@ char *create_array(unsigned int size, char c)
 	}
 	return (i);
 }
-
