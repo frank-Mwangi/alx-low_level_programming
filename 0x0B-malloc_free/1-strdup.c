@@ -26,7 +26,6 @@ char *_strdup(char *str)
 		i[y] = str[y];
 		y++;
 	}
-	free(i);
 	return (i);
 }
 
