@@ -2,7 +2,6 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 
 int _putchar(char);
