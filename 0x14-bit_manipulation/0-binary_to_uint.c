@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, sum = 0, index = 0;
+	unsigned int sum = 0, index = 0;
 	const char *str;
 
 	str = b;
