@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * cp - copies content of source file to destination
@@ -6,7 +6,7 @@
  * @file_to: destination file
  * Return: integer
  */
-int cp(char *file_from, *file_to)
+int cp(char *file_from, char *file_to)
 {
 	char *buffer[1024];
 	int td, fd, fr, fw;
@@ -15,7 +15,7 @@ int cp(char *file_from, *file_to)
 	fd = open(file_from, O_RDONLY);
 	if (fd < 0)
 		return (98);
-	td = open(file_to, O_CREAT | O_WRONLY | o_TRUNC, 0664);
+	td = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (td < 0)
 		return (99);
 
