@@ -12,30 +12,30 @@ int cp(char *file_from, char *file_to)
 	int td, fd, fr, fw, fc, ftc;
 
 	fd = open(file_from, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (98);
 	td = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (td < 0)
+	if (td == -1)
 		return (99);
 
 	do {
 		fr = read(fd, buffer, 1024);
-		if (fr < 0)
+		if (fr == -1)
 			return (98);
 
 		fw = write(td, buffer, fr);
-		if (fw < 0)
+		if (fw == -1)
 			return (99);
 	} while (fr == 1024);
 
 	fc = close(fd);
-	if (fc < 0)
+	if (fc == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		return (100);
 	}
 	ftc = close(td);
-	if (ftc < 0)
+	if (ftc == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", td);
 		return (100);
