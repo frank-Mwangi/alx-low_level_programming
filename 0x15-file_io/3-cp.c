@@ -8,9 +8,8 @@
  */
 int cp(char *file_from, char *file_to)
 {
-	char *buffer[1024];
-	int td, fd, fr, fw;
-	int fc, ftc;
+	char buffer[1024];
+	int td, fd, fr, fw, fc, ftc;
 
 	fd = open(file_from, O_RDONLY);
 	if (fd < 0)
@@ -19,30 +18,26 @@ int cp(char *file_from, char *file_to)
 	if (td < 0)
 		return (99);
 
-	fr = read(fd, buffer, 1024);
-	if (fr < 0)
-		return (98);
-
-	while (fr > 0)
-	{
-		fw = write(td, buffer, fr);
-		if (fw < 0)
-			return (99);
+	do {
 		fr = read(fd, buffer, 1024);
 		if (fr < 0)
 			return (98);
-	}
+
+		fw = write(td, buffer, fr);
+		if (fw < 0)
+			return (99);
+	} while (fr == 1024);
 
 	fc = close(fd);
 	if (fc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fc);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		return (100);
 	}
 	ftc = close(td);
 	if (ftc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ftc);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", td);
 		return (100);
 	}
 	return (0);
@@ -58,9 +53,10 @@ int main(int ac, char **av)
 	int c;
 
 	if (ac != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 
-	c = cp(av[2], av[1]);
+	c = cp(av[1], av[2]);
 	switch (c)
 	{
 		case (98):
