@@ -32,13 +32,13 @@ int cp(char *file_from, char *file_to)
 	if (fc == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		return (100);
+		 exit(100);
 	}
 	ftc = close(td);
 	if (ftc == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", td);
-		return (100);
+		exit(100);
 	}
 	return (0);
 }
@@ -53,8 +53,10 @@ int main(int ac, char **av)
 	int c;
 
 	if (ac != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-	exit(97);
+		exit(97);
+	}
 
 	c = cp(av[1], av[2]);
 	switch (c)
