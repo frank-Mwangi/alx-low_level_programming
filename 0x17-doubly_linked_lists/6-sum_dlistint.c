@@ -4,7 +4,7 @@
  * sum_dlistint - sums all values in DLL
  * @head: pointer to beginning of linked
  *        list
- * Return: sum 
+ * Return: sum
  */
 
 int sum_dlistint(dlistint_t *head)
