@@ -9,7 +9,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 clean: 
 	${RM} *~ ${NAME}
 all: m.h ${OBJ}
-	${CC} ${SRC} -o ${NAME}
+	${CC} -Wall -Werror -Wextra -pedantic ${SRC} -o ${NAME}
 oclean:
 	${RM} ${OBJ}
 fclean: clean oclean
