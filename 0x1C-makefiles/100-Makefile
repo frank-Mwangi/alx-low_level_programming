@@ -12,4 +12,4 @@ all: m.h main.o school.o
 oclean:
 	${RM} main.o school.o
 fclean: clean oclean
-re: oclean all
+re: fclean all
