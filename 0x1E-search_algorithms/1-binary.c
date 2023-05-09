@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
 /**
- * binary_search: Searches for an array element using
- *		binary search algorithm	
+ * binary_search - Searches for an array element using
+ *		binary search algorithm
  *
  * @array: pointer to array in question
  * @size: length of array
