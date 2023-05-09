@@ -3,7 +3,7 @@
 
 /**
  * linear_search - performs linear serch on an array
- * 
+ *
  * @array: pointer to the array
  * @size: length of array
  * @value: value to search
